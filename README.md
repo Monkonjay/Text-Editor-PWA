@@ -20,7 +20,7 @@
 
 ### The challenge
 
-The challenge is to create an application that can be used to write and save notes. This application uses an Express.js back end, saves and retrieves note data from a JSON file. 
+The task is to build a text editor that runs in the browser. The app is a single-page application that meets the PWA criteria. Additionally, it features a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application also function offline. 
 
 ### User Story
 
@@ -74,9 +74,11 @@ THEN I should have proper build scripts for a webpack application
 
 ### Built with
 
-- Node.js
-- Inquirer
-- Express
+- Service Worker
+- IndexedDB
+- Webpack
+- Heroku
+
 
 
 
