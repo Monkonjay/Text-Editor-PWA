@@ -42,7 +42,7 @@ module.exports = () => {
         start_url: "/",
         orientation: "portrait",
         display: "standalone",
-        publicPath: "/",
+        publicPath: "./",
         icons: [
           {
             src: path.resolve("src/images/logo.png"),
