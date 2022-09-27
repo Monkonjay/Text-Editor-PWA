@@ -74,9 +74,9 @@ THEN I should have proper build scripts for a webpack application
 
 ### Built with
 
+- Webpack
 - Service Worker
 - IndexedDB
-- Webpack
 - Heroku
 
 
