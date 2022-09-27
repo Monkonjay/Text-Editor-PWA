@@ -26,8 +26,32 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
+      new InjectManifest({
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
+      }),
       new MiniCssExtractPlugin(),
       new GenerateSW(),
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: "Text Editor with PWA",
+        short_name: "JATE",
+        description: "JATE Text Editor",
+        background_color: "#ffffff",
+        start_url: "/",
+        orientation: "portrait",
+        display: "standalone",
+        publicPath: "/",
+        icons: [
+          {
+            src: path.resolve("src/images/logo.png"),
+            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+            destination: path.join("assets", "icons"),
+          },
+        ],
+
+      })
       
     ],
 
@@ -45,7 +69,11 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
+              presets: ['@babel/preset-env'],
+              plugins: [
+                "@babel/plugin-proposal-object-rest-spread",
+                "@babel/transform-runtime",
+              ]
             }
           }
         },
