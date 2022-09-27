@@ -65,8 +65,8 @@ THEN I should have proper build scripts for a webpack application
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/Monkonjay/Note-Taker)
-- Heroku Deployed Link: [Test the Project]()
+- Solution URL: [Github Repo](https://github.com/Monkonjay/Text-Editor-PWA)
+- Heroku Deployed Link: [Test the Project](https://pwa-text-editor-ucb-22.herokuapp.com/)
 
 
 
